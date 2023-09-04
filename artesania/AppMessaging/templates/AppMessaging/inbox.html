@@ -1,0 +1,20 @@
+{% extends "AppArtesania/padre.html" %}
+{% load static %}
+{% block titulo %} {% endblock %}
+{% block contenido_que_cambia %} 
+<h2>{{ mensaje }}</h2>
+
+<h1>Bandeja de Entrada</h1>
+{% if no_messages_message %}
+    <p>{{ no_messages_message }}</p>
+{% else %}
+    <ul>
+        {% for user in users_with_messages %}
+            <li>
+                <a href="{% url 'chat' user.id %}">{{ user.username }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

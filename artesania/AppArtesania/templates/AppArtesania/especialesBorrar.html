@@ -1,0 +1,50 @@
+{% extends "AppArtesania/padre.html" %}
+{% load static %}
+{% block titulo %}  {% endblock %}
+{% block contenido_que_cambia %} 
+<style>
+    h1 {color: rebeccapurple;}
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% if user.id == especial.usuario.id %}
+
+<div class="container text-center">
+
+<form method="post">{% csrf_token %}
+    <h4>¿Estás seguro(a) que deseas borrar el producto {{ especial.modelo }} ?</h4>
+    <p>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+    </p>
+</form>
+
+</div>
+{% else %}
+<div class="container">
+<h4>No tienes acceso a esta pagina!</h4>
+</div>
+{% endif %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+
+
+
+
+
+

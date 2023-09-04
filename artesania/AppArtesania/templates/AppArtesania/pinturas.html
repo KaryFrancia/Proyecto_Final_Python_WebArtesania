@@ -1,0 +1,47 @@
+{% extends "AppArtesania/padre.html" %}
+{% load static %}
+{% block titulo %}  {% endblock %}
+{% block contenido_que_cambia %} 
+<style>
+    h1 {color: rebeccapurple;}
+</style>
+<br>
+<br>
+
+<div class="container text-center">
+    <h1>Pinturas</h1>
+    <br>
+    <h2>¡Deja que tus paredes cuenten historias!</h2>
+    <p class="text-center">Autor: <strong>Kary Francia</strong> | Fecha: 2023-08-31</p>
+    <br>
+    <br>
+    <div class="text" style="text-align: justify;">
+    <p>Que tus espacios se llenen de tradiciones y que tu hogar se convierta en un escaparate de la cultura y la naturaleza. Nuestra colección de cuadros de pinturas pintados a mano es una ventana a la riqueza de dos magníficos países: Perú y Uruguay. Cada obra de arte es una ventana a un mundo de paisajes majestuosos y costumbres auténticas que abarcan desde la costa hasta la sierra y la selva peruana, y que se extienden por las distintas regiones de Uruguay.</p>
+    <p>En <span class="text-rosado" style="font-size: 20px;">pericotitos artesanos</span> nos aseguramos que cada pincelada lleve consigo la esencia de paisajes impresionantes y la autenticidad de las costumbres locales. Desde los vibrantes colores de los mercados peruanos hasta los idílicos paisajes rurales de Uruguay, cada cuadro es una invitación a explorar, imaginar y conectar con las raíces de estas hermosas culturas. Transforma tus espacios en un viaje artístico y emocional que celebra la diversidad y la belleza de dos naciones encantadoras.</p>   
+    <p>Además, podrás encontrar representaciones de paisajes diversos de todo el mundo. Invita a la aventura y la cultura a tu hogar con estas obras de arte que transformarán tus espacios en un viaje artístico lleno de descubrimientos y emociones.</p>
+</div>
+
+<br>
+<div class="container text-center">
+    <div class="row">
+            {% for pintura in pinturas %}
+            <div class="col-sm-6 align-items-center">
+                <div class="card-body">
+                <img src="{% if pintura.imagenProducto %}{{ pintura.imagenProducto.url }}{% endif %}" class="" width="150px">                       
+                {{pintura.titulo}}
+                <a href="{% url 'pintura' pintura.id %}"><i class="bi bi-eye"></i></a>
+                {% if user.id == pintura.usuario.id %}
+                <a href="{% url 'pintura_editar' pintura.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'pintura_eliminar' pintura.id %}"><i class="bi bi-trash text-danger"></i></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

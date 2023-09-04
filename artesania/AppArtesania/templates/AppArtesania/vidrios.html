@@ -1,0 +1,46 @@
+{% extends "AppArtesania/padre.html" %}
+{% load static %}
+{% block titulo %}  {% endblock %}
+{% block contenido_que_cambia %} 
+<style>
+    h1 {color: rebeccapurple;}
+</style>
+<br>
+<br>
+
+<div class="container text-center">
+    <h1>Vidrios</h1>
+    <br>
+    <h2>¿Listo para darle vida a tu hogar con un toque de elegancia y sostenibilidad?</h2>
+    <p class="text-center">Autor: <strong>Kary Francia</strong> | Fecha: 2023-08-31</p>
+    <br>
+    <br>
+    <div class="text" style="text-align: justify;">
+    <p>Nuestros artículos de vidrio pintados a mano son mucho más que objetos cotidianos; son piezas de arte funcionales que transformarán tu espacio en un rincón de belleza y originalidad. </p>
+    <p>En <span class="text-rosado" style="font-size: 20px;">pericotitos artesanos</span> tenemos desde floreros que dan vida a tus flores favoritas hasta ingeniosos recipientes reciclados que añaden estilo a tu cocina, cada pieza ha sido cuidadosamente decorada a mano para crear una experiencia única. Descubre la armonía entre la creatividad y la sustentabilidad, y lleva a casa la magia de los detalles pintados a mano en vidrio.</p>   
+</div>
+
+<br>
+<div class="container text-center">
+    <div class="row">
+            {% for vidrio in vidrios %}
+            <div class="col-sm-6 align-items-center">
+                <div class="card-body">
+                <img src="{% if vidrio.imagenProducto %}{{ vidrio.imagenProducto.url }}{% endif %}" class="" width="100px">                       
+                {{vidrio.titulo}}
+                <a href="{% url 'vidrio' vidrio.id %}"><i class="bi bi-eye"></i></a>
+                {% if user.id == vidrio.usuario.id %}
+                <a href="{% url 'vidrio_editar' vidrio.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'vidrio_eliminar' vidrio.id %}"><i class="bi bi-trash text-danger"></i></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

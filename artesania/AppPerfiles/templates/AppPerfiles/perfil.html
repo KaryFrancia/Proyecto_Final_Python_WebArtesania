@@ -1,0 +1,45 @@
+{% extends "AppArtesania/padre.html" %}
+{% load static %}
+{% block titulo %}  {% endblock %}
+{% block contenido_que_cambia %} 
+<style>
+    h1 {color: rebeccapurple;}
+    
+</style>
+<br>
+
+{% if profile %}
+<h1>Tu Perfil</h1>
+
+<div>
+    {% if profile.image %}
+        <img src="{{ profile.image.url }}" alt="Profile Image">
+    {% endif %}
+    <h2>{{ profile.nombre }} {{ profile.apellido }}</h2>
+    <p>{{ profile.email }} </p>
+    <p>{{ profile.descripcion }}</p>
+    {% if profile.website %}
+        <p>Website: <a href="{{ profile.website }}">{{ profile.website }}</a></p>
+    {% endif %}
+    <p>¿Deseas agregar tu avatar?</p> 
+    <a href="{% url 'agregarAvatar' %}"><button type="submit" class="btn btn-primary">Agregar</button></a>
+
+    <br>
+    <br>
+<h3>Administración de mensajes: </h3>
+<p class="text"> Bandeja de entrada   <a href="{% url 'inbox' %}"><i class="bi bi-inbox-fill"></i></a></p>
+<p class="text"> Redactar mensaje   <a href="{% url 'compose' %}"><i class="bi bi-chat-fill"></i></a></p>
+
+</div>
+
+
+
+<p class="text-center">Deseas editar tu perfil   <a href="{% url 'editar_perfil' %}"><i class="bi bi-pencil-fill"></i></a></p>
+<p class="text-center">Deseas eliminar tu perfil   <a href="{% url 'borrar_perfil' profile.pk %}"><i class="bi bi-trash text-danger"></i></a></p>
+
+<br>
+{% else %}
+<p>Usted no tiene un perfil creado. <a href="{% url 'crear_perfil' %}">Crear perfil</a></p>
+{% endif %}
+{% endblock %}
+

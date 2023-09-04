@@ -1,0 +1,105 @@
+{% extends "AppArtesania/padre.html" %}
+{% load static %}
+{% block titulo %}                                 {% endblock %}
+{% block contenido_que_cambia %} 
+<h2>{{ mensaje }}</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container text-center">
+        <div class="" >
+            <div>
+                <h2>Bienvenido (a) a la web de los <span class="text-rosado" style="font-size: 38px;"> pericotitos artesanos</span></h2>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+<br>      
+      
+<!-- Testimonials-->
+
+<section class="testimonials text-center bg-light">
+    <div class="container">
+        <h2 class="text-celeste mb-5">Lo que las personas están diciendo... </h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3" src="static/AppArtesania/assets/img/testimonials-1.jpg" alt="..." />
+                    <h5>Margaret E.</h5>
+                    <p class="font-weight-light mb-0">"Gracias pericotitos artesanos por la joyería preciosa que me enviarion! Sin duda resaltó mi vestido en la reunión de anoche."</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3" src="static/AppArtesania/assets/img/testimonials-2.jpg" alt="..." />
+                    <h5>Fred S.</h5>
+                    <p class="font-weight-light mb-0">"Hermosos mates pintados a manos"</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3" src="static/AppArtesania/assets/img/testimonials-3.jpg" alt="..." />
+                    <h5>Sarah W.</h5>
+                    <p class="font-weight-light mb-0">"Estas pinturas son maravillosas! Muchas gracias pericotitos artesanos por poner su arte al alcance de nuestras manos!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Link venta de artesanias -->
+
+  <br>
+<section class="call-to-action text-white text-center" id="signup">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <h2 class="mb-4">¡Comencemos!</h2>
+                <h2 class="mb-4">¿Quieres vender una artesanía?</h2>
+                <a href="{% url 'nuevo' %}"><button type="submit" class="btn btn-primary btn-lg disabled">Agregala acá</button></a>
+                   
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer-->
+<footer class="footer bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                <ul class="list-inline mb-2">
+                    <li class="list-inline-item"><a href="{% url 'acercaDeMi' %}">About</a></li>
+                    
+                  
+                </ul>
+                <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                <ul class="list-inline mb-0">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/valkyria.19/"><i class="bi-instagram fs-3"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer copyright -->
+    
+<footer class="p-5 bg-dark text-white text-center position-relative">
+    <div class="container">
+        <p class="lead text-white">Copyright &copy; 2023 Kary Francia</p>
+        <a href="" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+    </div>
+</footer>
+
+
+{% endblock %}

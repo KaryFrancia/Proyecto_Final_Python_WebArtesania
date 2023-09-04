@@ -1,0 +1,32 @@
+{% extends "AppArtesania/padre.html" %}
+{% load static %}
+{% block titulo %} {% endblock %}
+{% block contenido_que_cambia %} 
+<style>
+    h1 {color: rebeccapurple;}
+</style>
+<h2>{{ mensaje }}</h2>
+
+
+<h1> Buscar Artesanía </h1>
+
+<form method="get" action="{% url 'buscar_artesanias' %}"> {% csrf_token %}
+    <input type="text" name="titulo" id="titulo" placeholder="INSERTE PRODUCTO">
+    <input type="submit" value="BUSCAR PRODUCTO">
+</form>
+     
+  {% if artesanias %}
+    <h3>Resultados de la búsqueda:</h3>
+    <ul>
+      {% for artesania in artesanias %}
+        <li>
+          <a href="{% url 'detalle_artesania' artesania.id %}">{{ artesania.titulo }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+
+
+  
+{% endblock %}
