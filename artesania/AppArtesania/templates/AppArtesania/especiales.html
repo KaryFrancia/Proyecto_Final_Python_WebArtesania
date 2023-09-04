@@ -4,6 +4,10 @@
 {% block contenido_que_cambia %} 
 <style>
     h1 {color: rebeccapurple;}
+    .card-body img {
+        max-width: 100px; 
+        height: auto; 
+    }
 </style>
 <br>
 <br>
@@ -18,29 +22,27 @@
     <div class="text" style="text-align: justify;">
     <p>En nuestra sección 'Especiales', te invitamos a celebrar momentos significativos con un toque personalizado y artesanal. Desde encantadores regalos navideños que iluminarán tu temporada festiva hasta delicadas creaciones para el Día de la Madre, el Día del Padre, el Día de los Abuelos, el Día del Amor y la Amistad, y muchas otras ocasiones especiales, aquí encontrarás tesoros únicos que expresan tus sentimientos de manera auténtica.</p>
     <p>En <span class="text-rosado" style="font-size: 20px;">pericotitos artesanos</span> nos encargamos de que cada pieza sea cuidadosamente confeccionada a mano para reflejar el cariño y la importancia de la ocasión. Celebra la vida y el amor de una manera especial, con nuestros regalos que se convierten en recuerdos que perduran para siempre.</p>   
-</div>
-
-<br>
-<div class="container text-center">
-    <div class="row">
+    
+    <div class="container text-center">
+        <div class="row">
             {% for especial in especiales %}
-            <div class="col-sm-6 align-items-center">
-                <div class="card-body">
-                <img src="{% if especial.imagenProducto %}{{ especial.imagenProducto.url }}{% endif %}" class="" width="100px">                       
-                {{especial.titulo}}
-                <a href="{% url 'especial' especial.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == especial.usuario.id %}
-                <a href="{% url 'especial_editar' especial.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'especial_eliminar' especial.id %}"><i class="bi bi-trash text-danger"></i></a>
-                <br>
-                <br>
-                <br>
-                <br>
-                {% endif %}
+                <div class="col-sm-6 align-items-center">
+                    <div class="card-body">
+                        <img src="{% if especial.imagenProducto %}{{ especial.imagenProducto.url }}{% endif %}" class="" width="100px">                       
+                        {{especial.titulo}}
+                        <a href="{% url 'especial' especial.id %}"><i class="bi bi-eye"></i></a>
+                        {% if user.id == especial.usuario.id %}
+                            <a href="{% url 'especial_editar' especial.id %}"><i class="bi bi-pencil-fill"></i></a>
+                            <a href="{% url 'especial_eliminar' especial.id %}"><i class="bi bi-trash text-danger"></i></a>
+                        {% endif %}
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
+        </div>
     </div>
 </div>
-
 {% endblock %}

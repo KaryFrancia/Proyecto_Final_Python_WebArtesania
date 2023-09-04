@@ -4,6 +4,10 @@
 {% block contenido_que_cambia %} 
 <style>
     h1 {color: rebeccapurple;}
+    .card-body img {
+        max-width: 100px; 
+        height: auto; 
+    }
 </style>
 <br>
 <br>
@@ -18,29 +22,27 @@
     <div class="text" style="text-align: justify;">
     <p>Nuestros mates de cerámica y madera pintados a mano son mucho más que simples recipientes para disfrutar del mate; son obras maestras artesanales que añaden un toque de estilo y tradición a tu día a día. Sumérgete en el mundo de la artesanía uruguaya y descubre la magia que reside en cada detalle, en cada pincelada que adorna estos mates únicos. ¡Sé parte de esta experiencia auténtica y lleva a casa un pedazo del encanto uruguayo!</p>
     <p>En <span class="text-rosado" style="font-size: 20px;">pericotitos artesanos</span> se emplean técnicas de pintura a mano para crear patrones, imágenes, o diseños únicos en la superficie del mate, a menudo reflejando elementos de la cultura uruguaya, como paisajes, símbolos tradicionales o motivos folclóricos.  Estos mates uruguayos pintados a mano no solo son funcionales como recipientes para el mate, sino que también son apreciados como obras de arte decorativas que representan la habilidad y la creatividad de los artesanos locales. Estas piezas pueden ser utilizadas en reuniones sociales, regalos especiales o como elementos decorativos en el hogar.</p>   
-</div>
 
-<br>
-<div class="container text-center">
-    <div class="row">
+    <div class="container text-center">
+        <div class="row">
             {% for mate in mates %}
-            <div class="col-sm-6 align-items-center">
-                <div class="card-body">
-                <img src="{% if mate.imagenProducto %}{{ mate.imagenProducto.url }}{% endif %}" class="" width="100px">                       
-                {{mate.titulo}}
-                <a href="{% url 'mate' mate.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == mate.usuario.id %}
-                <a href="{% url 'mate_editar' mate.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'mate_eliminar' mate.id %}"><i class="bi bi-trash text-danger"></i></a>
-                <br>
-                <br>
-                <br>
-                <br>
-                {% endif %}
+                <div class="col-sm-6 align-items-center">
+                    <div class="card-body">
+                        <img src="{% if mate.imagenProducto %}{{ mate.imagenProducto.url }}{% endif %}" class="" width="100px">                       
+                        {{mate.titulo}}
+                        <a href="{% url 'mate' mate.id %}"><i class="bi bi-eye"></i></a>
+                        {% if user.id == mate.usuario.id %}
+                            <a href="{% url 'mate_editar' mate.id %}"><i class="bi bi-pencil-fill"></i></a>
+                            <a href="{% url 'mate_eliminar' mate.id %}"><i class="bi bi-trash text-danger"></i></a>
+                        {% endif %}
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
+        </div>
     </div>
 </div>
-
 {% endblock %}

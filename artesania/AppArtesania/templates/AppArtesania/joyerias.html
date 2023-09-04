@@ -4,6 +4,10 @@
 {% block contenido_que_cambia %} 
 <style>
     h1 {color: rebeccapurple;}
+    .card-body img {
+        max-width: 100px; 
+        height: auto; 
+    }
 </style>
 <br>
 <br>
@@ -18,29 +22,27 @@
     <div class="text" style="text-align: justify;">
     <p>Descubre la esencia de belleza natural con nuestra exquisita colección de joyería confeccionada a mano. Cada pieza es una obra maestra única, creada con pasión y dedicación, utilizando semillas reales, algunas de ellas nativas del corazón del Perú, como el huayruro. Desde elegantes aretes que dan vida a tu rostro hasta collares que cuentan historias a través de sus cuentas, pulseras que llevan la energía de la naturaleza en tu muñeca y anillos que destacan tu estilo personal.</p>
     <p>En <span class="text-rosado" style="font-size: 20px;">pericotitos artesanos</span> queremos que nuestra joyería te conecte con la autenticidad de la madre naturaleza y la destreza de los artesanos. Sumérgete en una experiencia única y lleva contigo un pedazo de la riqueza cultural y la belleza natural del Perú.</p>   
-</div>
 
-<br>
-<div class="container text-center">
-    <div class="row">
+    <div class="container text-center">
+        <div class="row">
             {% for joyeria in joyerias %}
-            <div class="col-sm-6 align-items-center">
-                <div class="card-body">
-                <img src="{% if joyeria.imagenProducto %}{{ joyeria.imagenProducto.url }}{% endif %}" class="" width="100px">                       
-                {{joyeria.titulo}}
-                <a href="{% url 'joyeria' joyeria.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == joyeria.usuario.id %}
-                <a href="{% url 'joyeria_editar' joyeria.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'joyeria_eliminar' joyeria.id %}"><i class="bi bi-trash text-danger"></i></a>
-                <br>
-                <br>
-                <br>
-                <br>
-                {% endif %}
+                <div class="col-sm-6 align-items-center">
+                    <div class="card-body">
+                        <img src="{% if joyeria.imagenProducto %}{{ joyeria.imagenProducto.url }}{% endif %}" class="" width="100px">                       
+                        {{joyeria.titulo}}
+                        <a href="{% url 'joyeria' joyeria.id %}"><i class="bi bi-eye"></i></a>
+                        {% if user.id == joyeria.usuario.id %}
+                            <a href="{% url 'joyeria_editar' joyeria.id %}"><i class="bi bi-pencil-fill"></i></a>
+                            <a href="{% url 'joyeria_eliminar' joyeria.id %}"><i class="bi bi-trash text-danger"></i></a>
+                        {% endif %}
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
+        </div>
     </div>
 </div>
-
 {% endblock %}
