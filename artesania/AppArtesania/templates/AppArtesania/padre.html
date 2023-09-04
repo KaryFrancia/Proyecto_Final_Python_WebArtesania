@@ -8,7 +8,7 @@
         <meta name="author" content="" />
         <title>Pericotitos Artesanos</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{% static 'AppArtesania/assets/mouse.png' %}" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
@@ -34,7 +34,7 @@
             <div class="container">
                 <a class="navbar-brand text-rosado" href="#!">PERICOTITOS ARTESANOS</a>
                 {% if user.is_authenticated %}
-                <a class="btn btn-secondary" href="{% url 'inicio' %}">Inicio</a>
+                <a class="btn btn-light" href="{% url 'inicio' %}">Inicio</a>
                 <a class="btn btn-dark" href="{% url 'busqueda' %}">Buscar</a>
                 <a class="btn btn-secondary" href="{% url 'mates' %}">Mates</a>
                 <a class="btn btn-secondary" href="{% url 'vidrios' %}">Vidrios</a>
@@ -43,7 +43,7 @@
                 <a class="btn btn-secondary" href="{% url 'especiales' %}">Especiales</a>
                 <p>Bienvenido <span class="text-celeste">{{ user.username }}</span></p>     
                 <img src="{{ avatar }}" alt="Avatar" style="width:60px;height:60px;" />
-                <a class="btn btn-dark" href="{% url 'profile' %}">Ver Perfil</a>
+                <a class="btn btn-info" href="{% url 'profile' %}">Ver Perfil</a>
                 <a class="btn btn-danger" href="{% url 'logout' %}">Salir</a>
                 {% else %}
                 <a class="btn btn-dark" href="{% url 'busqueda' %}">Buscar</a>
