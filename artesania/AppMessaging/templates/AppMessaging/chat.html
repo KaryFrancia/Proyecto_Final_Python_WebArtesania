@@ -5,15 +5,18 @@
 <h2>{{ mensaje }}</h2>
 
 <h1>Conversación con {{ user_to.username }}</h1>
-<ul>
+<ul class="chat">
     {% for message in messages %}
-        <li>
-            <strong>De:</strong> {{ message.remitente.username }}<br>
-            <strong>Fecha:</strong> {{ message.tiempo }}<br>
-            <strong>Mensaje:</strong> {{ message.contenido }}
+        <li class="message {% if message.remitente == request.user %}sent{% else %}received{% endif %}">
+            <div class="message-content">
+                <p class="message-sender"><strong>{{ message.remitente.username }}</strong></p>
+                <p class="message-text"> {{ message.contenido }} </p>
+                <p class="message-time"><strong>{{ message.tiempo }}</strong></p>
+            </div>
         </li>
     {% endfor %}
 </ul>
+
 
 <!-- Formulario para enviar un nuevo mensaje -->
 <form method="post" action="{% url 'compose' %}">

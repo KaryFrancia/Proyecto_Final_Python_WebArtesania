@@ -45,8 +45,9 @@ def compose(request):
 def chat(request, user_id):
     user_to = get_object_or_404(User, id=user_id)
 
+   
     messages = Message.objects.filter(
-        (Q(remitente=request.user) & Q(destinatario=user_to)) | (Q(remitente=user_to) & Q(destinatario=request.user))
+        (Q(remitente=request.user, destinatario=user_to) | Q(remitente=user_to, destinatario=request.user))
     ).order_by('tiempo')
 
     return render(request, 'AppMessaging/chat.html', {'user_to': user_to, 'messages': messages, "avatar": obtenerAvatar(request)})

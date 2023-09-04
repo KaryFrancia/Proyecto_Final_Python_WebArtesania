@@ -10917,3 +10917,45 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.chat {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message-content {
+  background: #C4A7C5; /* Color de fondo para los mensajes del destinatario */
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%; /* Ajusta el ancho del mensaje según tu preferencia */
+}
+
+.message.sent .message-content {
+  background: #B2DBFC; /* Color de fondo para los mensajes del remitente */
+}
+
+.message-sender {
+  font-size: 15px; /* Tamaño de fuente para el nombre de usuario */
+  margin: 0; /* Elimina el margen predeterminado */
+}
+
+.message-time {
+  font-size: 12px; /* Tamaño de fuente para la fecha y hora */
+  margin: 0; /* Elimina el margen predeterminado */
+}
+
+.message-text {
+  font-size: 18px; /* Tamaño de fuente para el contenido del mensaje */
+  margin: 0; /* Elimina el margen predeterminado */
+}
