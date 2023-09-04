@@ -300,14 +300,18 @@ class ComentarioPagina(LoginRequiredMixin, CreateView):
 
 # LISTA DE BLOG
 
-
 def buscar_artesanias(request):
-    titulo = request.GET["titulo"]
-    if titulo!="":
+    titulo = request.GET.get("titulo", "")
+
+    if titulo:
         artesanias = Artesania.objects.filter(titulo__icontains=titulo)     
-        return render(request, 'AppArtesania/busqueda.html', {'artesanias': artesanias, "avatar":obtenerAvatar(request)})
+        if artesanias:
+            return render(request, 'AppArtesania/busqueda.html', {'artesanias': artesanias, "avatar":obtenerAvatar(request)})
+        else:
+            return render(request, 'AppArtesania/busqueda.html', {"mensaje": "No se encontraron artesanías con el título especificado", "avatar":obtenerAvatar(request)})
     else:
-       return render(request, 'AppArtesania/busqueda.html', {"mensaje": "No ingresaste información", "avatar":obtenerAvatar(request)})
+        return render(request, 'AppArtesania/busqueda.html', {"mensaje": "No ingresaste información", "avatar":obtenerAvatar(request)})
+
 
 
 def busqueda(request):
