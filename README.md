@@ -67,11 +67,11 @@ Dentro de la página de perfil de usuario, los miembros pueden acceder a su band
 
 ##### Categorías de Productos:
 Los usuarios pueden explorar una amplia gama de categorías de productos artesanales, que incluyen:
-Mates
-Vidrios
-Joyas
-Pinturas
-Especiales
+- Mates
+- Vidrios
+- Joyas
+- Pinturas
+- Especiales
 
 ##### Publicación de Productos:
 Desde la página de inicio, en la sección agregar artesanías, los miembros de Pericotitos Artesanos pueden crear y publicar sus productos artesanales en la plataforma. Pueden cargar imágenes, descripciones detalladas y establecer precios para sus creaciones.
