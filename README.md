@@ -48,8 +48,7 @@ Pericotitos Artesanos - Web Tipo blog para venta de artesanías.
 5. Accede a la aplicación en tu navegador visitando: `http://127.0.0.1:8000/`
 
 ## Descripción 
-##### Nombre de la Página Web: 
-Pericotitos Artesanos Marketplace
+##### Pericotitos Artesanos Marketplace
 
 Pericotitos Artesanos Marketplace, es una plataforma en línea dedicada a la promoción y venta de artesanías únicas y hechas a mano. Diseñadas exclusivamente para los miembros de la comunidad de Pericotitos Artesanos, esta plataforma ofrece a los usuarios una experiencia interactiva para compartir y vender sus creaciones artesanales y conectarse en un entorno amigable.
 
