@@ -54,7 +54,7 @@ Pericotitos Artesanos Marketplace, es una plataforma en línea dedicada a la pro
 
 ## Funcionalidades
 ##### Inicio de Sesión y Registro:
-Para acceder a todas las funciones de la plataforma (excepto "buscar" y "Acerca de mí") los usuarios deben iniciar sesión con sus credenciales existentes o registrarse si aún no tienen una cuenta. Una vez que la autenticación es exitosa, los usuarios son redirigidos al inicio de la página web.
+Para acceder a todas las funciones de la plataforma (excepto "Ver tutotrial en video", "buscar" y "Acerca de mí") los usuarios deben iniciar sesión con sus credenciales existentes o registrarse si aún no tienen una cuenta. Una vez que la autenticación es exitosa, los usuarios son redirigidos al inicio de la página web.
 
 ##### Perfil de Usuario:
 Cada usuario tiene un perfil personalizable donde pueden mostrar su información, agregar una foto de perfil, su avatar, sus datos personales, editar estos datos o cambiar su contraseña, también tiene la opción de eliminar su perfil, pero en ese caso no podrá administrar sus mensajes con otros usuarios, ya que la administración de mensajería se encuentra ubicada en la página de perfil.
