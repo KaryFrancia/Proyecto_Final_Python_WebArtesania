@@ -50,7 +50,7 @@ Pericotitos Artesanos - Web Tipo blog para venta de artesanías.
 ## Descripción 
 ##### Pericotitos Artesanos Marketplace
 
-Pericotitos Artesanos Marketplace, es una plataforma en línea dedicada a la promoción y venta de artesanías únicas y hechas a mano. Diseñadas exclusivamente para los miembros de la comunidad de Pericotitos Artesanos, esta plataforma ofrece a los usuarios una experiencia interactiva para compartir y vender sus creaciones artesanales y conectarse en un entorno amigable.
+Pericotitos Artesanos Marketplace, es una plataforma en línea dedicada a la promoción y venta de artesanías únicas y hechas a mano. La web está diseñada exclusivamente para los miembros de la comunidad de Pericotitos Artesanos, esta plataforma ofrece a los usuarios una experiencia interactiva para compartir y vender sus creaciones artesanales y conectarse en un entorno amigable.
 
 ## Funcionalidades
 ##### Inicio de Sesión y Registro:
