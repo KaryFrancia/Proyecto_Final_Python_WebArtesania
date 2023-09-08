@@ -108,7 +108,7 @@ Si deseas contribuir con este proyecto, sigue estos pasos:
 5. Open a pull request on GitHub.
 
 ## Video
-Se crea este video para una visión completa de cómo utilizar la plataforma y aprovechar al máximo todas las opciones disponibles. ¡Espero que encuentres esta guía útil y que disfrutes de tu experiencia en Pericotitos Artesanos Marketplace!
+En este video se observa una visión completa de cómo utilizar la plataforma y aprovechar al máximo todas las opciones disponibles. ¡Espero que encuentres esta guía útil y que disfrutes de tu experiencia en Pericotitos Artesanos Marketplace!
 Para acceder al video, simplemente haz clic en el siguiente enlace: https://www.youtube.com/watch?v=UL9SGg-N5nk
 
 
