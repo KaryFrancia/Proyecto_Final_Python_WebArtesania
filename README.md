@@ -31,7 +31,7 @@ Pericotitos Artesanos - Web Tipo blog para venta de artesanías.
 
 ## Instalación
 
-1. Colna este repositorio en tu máquina local: git clone https://github.com/KaryFrancia/Proyecto_Final_Python_WebArtesania.git
+1. Clona este repositorio en tu máquina local: git clone https://github.com/KaryFrancia/Proyecto_Final_Python_WebArtesania.git
 2. Navega hacia el directorio del proyecto: cd artesanía
 3. Crea y activa un entorno virtual:
 - Windows:
