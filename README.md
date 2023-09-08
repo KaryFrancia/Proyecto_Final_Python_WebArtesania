@@ -86,13 +86,13 @@ Los autores de las publicaciones tienen la capacidad de editar y eliminar sus pr
 Incluso estando fuera de la sesión, los visitantes pueden acceder a la funcionalidad de búsqueda de productos utilizando palabras clave. Esto permite a los usuarios, si es que así lo desean, buscar artesanías específicas sin necesidad de iniciar sesión. Tanto la búsqueda con sesión iniciada como fuera de sesión solo permite mostrar el detalle del producto.
 
 ##### Tutorial en Video:
-Fuera del inicio de sesión, se encuentra el botón Ver tutorial en video, este tutorial muestra cómo utilizar la plataforma de manera efectiva para vender artesanías hechas a mano.
+Fuera del inicio de sesión, se encuentra el botón "Ver tutorial en video", este tutorial muestra cómo utilizar la plataforma de manera efectiva para vender artesanías hechas a mano.
 
 ##### Cerrar Sesión y Volver a Iniciar Sesión:
 Los usuarios pueden cerrar sesión de forma segura cuando lo deseen y, si lo desean, pueden volver a iniciar sesión en cualquier momento.
 
 ##### Acerca de Mí:
-La plataforma incluye una sección "Acerca de Mí" donde se comparte información acerca de la creadora de la página web y el proyecto Pericotitos Artesanos.
+La plataforma incluye una sección "Acerca de Mí" donde se comparte información acerca de la creadora de la página web y del proyecto Pericotitos Artesanos.
 
 ## Pruebas
 
