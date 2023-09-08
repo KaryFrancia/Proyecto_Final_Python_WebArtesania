@@ -1,6 +1,7 @@
 # Proyecto Final Curso de Python - CoderHouse
 #### Comisión: 43870
 #### Alumna: Kary Francia Vásquez
+![Logo de mi proyecto](https://github.com/KaryFrancia/Proyecto_Final_Python_WebArtesania/blob/master/myproject.png)
 
 - [Nombre del proyecto](#nombre_del_proyecto)
 - [Versión](#versión)
