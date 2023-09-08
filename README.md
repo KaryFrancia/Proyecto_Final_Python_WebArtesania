@@ -98,7 +98,7 @@ La plataforma incluye una sección "Acerca de Mí" donde se comparte informació
 
 Para ver los casos de pruebas realizados, accede al archivo titulado "casos_de_prueba_proyecto_final_python.xlsx" el cual se encuentra en el presente repositorio https://github.com/KaryFrancia/Proyecto_Final_Python_WebArtesania/blob/master/casos_de_prueba_proyecto_final_python.pdf
 
-## Contribución: 
+## Contribución
 Si deseas contribuir con este proyecto, sigue estos pasos:
 
 1. Fork the repository.
