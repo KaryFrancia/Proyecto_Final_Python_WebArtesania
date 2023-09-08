@@ -3,7 +3,7 @@
 #### Alumna: Kary Francia Vásquez
 
 - [Nombre del proyecto](#nombre_del_proyecto)
-- [versión](#versión)
+- [Versión](#versión)
 - [Requerimientos](#requerimientos)
 - [Instalación](#instalación)
 - [Descripción](#descripción)
